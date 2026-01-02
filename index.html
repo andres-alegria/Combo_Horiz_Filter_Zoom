@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined galleries</title>
+
+    <!-- Fonts: keep these here so the embed works even inside an iframe (no dependence on site-wide fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=rowan@300,400,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+    <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/xxmzBrw.css">
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div id="smooth-wrapper">
+  <div id="smooth-content">
+
+    <section class="panel plain">
+      <h3>Scroll down for the Gallery</h3>
+    </section>
+
+    <section id="portfolio">
+      <div class="container-fluid">
+        <div class="horiz-gallery-wrapper">
+          <div class="horiz-gallery-strip">
+            <div class="project-wrap">
+              <img src="https://news.mongabay.com/testpics_julielarsen_1535/" alt="" />
+            </div>
+            <div class="project-wrap">
+              <img src="https://news.mongabay.com/testpics_julielarsen_1656/" alt="" />
+            </div>
+            <div class="project-wrap">
+              <img src="https://news.mongabay.com/testpics_julielarsen_2641/" alt="" />
+            </div>
+            <div class="project-wrap">
+              <img src="https://news.mongabay.com/testpics_julielarsen_2785/" alt="" />
+            </div>
+            <div class="project-wrap">
+              <img src="https://news.mongabay.com/testpics_julielarsen_3720/" alt="" />
+            </div>
+            <div class="project-wrap">
+              <img src="https://news.mongabay.com/testpics_julielarsen_3765/" alt="" />
+            </div>
+            <div class="project-wrap">
+              <img src="https://news.mongabay.com/testpics_julielarsen_5051/" alt="" />
+            </div>
+            <div class="project-wrap">
+              <img src="https://news.mongabay.com/testpics_julielarsen_6067/" alt="" />
+            </div>
+            <div class="project-wrap">
+              <img src="https://news.mongabay.com/testpics_julielarsen_6316/" alt="" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="panel plain">
+      <h3>Below comes a gallery with filters.</h3>
+    </section>
+
+    <section class="container">
+      
+       <div class="buttons-container">
+    <div class="checkboxes">
+      <label class="tag-button" for="all">
+        <input type="checkbox"  id="all" checked> All
+        <span class="checked">All</span>
+      </label>
+      <label class="tag-button" for="Elephants">
+        <input type="checkbox"  id="Elephants" class="filter" checked> Elephants
+        <span class="checked">Elephants</span>
+      </label>
+      <label class="tag-button" for="Ivory">
+        <input type="checkbox"  id="Ivory" class="filter" checked> Ivory
+        <span class="checked">Ivory</span>
+      </label>
+      <label class="tag-button" for="People">
+        <input type="checkbox"  id="People" class="filter" checked> People
+        <span class="checked">People</span>
+      </label>
+    </div>
+  </div>
+  <div class="box-container">
+    <div class="item Elephants" style="background-image:url('https://imgs.mongabay.com/wp-content/uploads/sites/20/2025/12/30145246/TestPics_JulieLarsen_1535.jpeg');"></div>
+    <div class="item Elephants" style="background-image:url('https://imgs.mongabay.com/wp-content/uploads/sites/20/2025/12/30145325/TestPics_JulieLarsen_6422.jpeg');"></div>
+    <div class="item Elephants" style="background-image:url('https://imgs.mongabay.com/wp-content/uploads/sites/20/2025/12/30145329/TestPics_JulieLarsen_6435.jpeg');"></div>
+    <div class="item Ivory" style="background-image:url('https://imgs.mongabay.com/wp-content/uploads/sites/20/2025/12/30145259/TestPics_JulieLarsen_2785.jpeg');"></div>
+    <div class="item Ivory" style="background-image:url('https://imgs.mongabay.com/wp-content/uploads/sites/20/2025/12/30145255/TestPics_JulieLarsen_2641.jpeg');"></div>
+    <div class="item People" style="background-image:url('https://imgs.mongabay.com/wp-content/uploads/sites/20/2016/08/01192305/2-Jenny-work-fun-JulieLarsenMahercWCS.jpg');"></div>
+    <div class="item People" style="background-image:url('https://imgs.mongabay.com/wp-content/uploads/sites/20/2016/08/01192307/5-detection-dogs-JulieLarsenMahercWCS.jpg');"></div>
+    <div class="item People" style="background-image:url('https://imgs.mongabay.com/wp-content/uploads/sites/20/2025/12/30145251/TestPics_JulieLarsen_1656.jpeg');"></div>
+
+  </div>
+      
+    </section>
+
+    <section class="zoom gallery">
+      <h3>Here is a gallery where you can zoom by clicking:</h3>
+  
+       <div class="wrapper">
+  <div class="boxes-container">
+    <div class="box">
+      <div class="box-content one"></div>
+    </div>
+    <div class="box">
+      <div class="box-content two"></div>
+    </div>
+    <div class="box">
+      <div class="box-content three"></div>
+    </div>
+    <div class="box">
+      <div class="box-content four"></div>
+    </div>
+    <div class="box">
+      <div class="box-content five"></div>
+    </div>
+    <div class="box">
+      <div class="box-content six"></div>
+    </div>
+  </div>
+</div>
+      
+    </section>
+
+    <section class="panel plain">
+      <h3>Thats it!</h3>
+    </section>
+
+</div>
+</div>
+
+ <!-- This modal is for the zoom gallery to pop-->
+
+<div class="modal">
+  <div class="overlay"></div>
+  <div class="content"></div>
+</div>
+
+
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://assets.codepen.io/16327/Flip.min.js"></script>
+<script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
+<script src="./script.js"></script>
+
+
+</body>
+  
+  
+  
+</html>

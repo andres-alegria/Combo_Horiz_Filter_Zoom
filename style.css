@@ -1,0 +1,283 @@
+:root {
+  --font-sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-serif: "Rowan", ui-serif, Georgia, "Times New Roman", Times, serif;
+  
+    /* override GSAP demo colors - change the codes only, leave the variable names as they are */
+  --color-just-black: #181818; /* for a new background color */
+  --color-just-white: #FCFCFC; /* your new text color (optional but usually needed) */
+  
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Headings (matches Mongabay's general look: sans body, serif headers) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+.row,
+.section,
+section {
+  position: relative;
+  overflow: hidden;
+}
+.section,
+section {
+  text-align: center;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.horiz-gallery-strip,
+.horiz-gallery-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+  position: relative;
+}
+
+.project-wrap {
+  width: 33vw;
+  padding: 2rem;
+  box-sizing: content-box;
+}
+.project-wrap img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Filter galerry */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: auto;
+  max-height: none;
+  min-height: 700px;
+}
+
+.checkboxes {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content:center
+}
+
+label {
+  display: block;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  height: auto;
+  padding-bottom: 100px;  /* optional: breathing room if it still feels tight */
+
+}
+
+.item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-just-black);
+  width: 200px;
+  height: 150px;
+  margin: 5px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 300px) {
+  .tag-button {
+    width: 100%
+  }
+}
+
+@media (max-width: 768px) {
+  .project-wrap {
+    width: 70vw;        /* optional: makes each card wider on phones */
+    padding: 0.25rem;    /* reduce top/bottom space */
+  }
+}
+
+
+.tag-button {
+  align-items: center;
+  border: 1.5px solid var(--color-just-white);
+  border-radius: 99px;
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 auto;
+  font-size: 13px;
+  gap: 8px;
+  justify-content: center;
+  margin: 5px;
+  max-width: 130px;
+  padding: 0.3rem 2rem;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tag-button input {
+  opacity: 0;
+  position: absolute;
+}
+
+.tag-button .checked {
+  opacity: 0;
+  border: 1.5px solid var(--color-just-white);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-just-white);
+  border-radius: 99px;
+  color: var(--color-just-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag-button input:checked + .checked {
+  opacity: 1;
+}
+
+.tag-button input:checked {
+}
+
+/* zoom galerry */
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxes-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  width: 25vw;
+  height: 25vw;
+  min-width: 200px;
+  padding: 10px;
+/*  border: 2px dashed var(--color-surface50); */
+  margin: 0.2rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: transparent; /* put any color you want e.g. background-color: #181818 if you want no colored box  */
+}
+
+.box-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal .content {
+  height: 90vh;
+  aspect-ratio: 4/5;
+  position: relative;
+}
+
+.modal .content .box-content {
+  background-color: var(--color-blue);
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #181818;
+  opacity: 0;
+}
+
+.box-content.one {
+  background-image: url("https://news.mongabay.com/testpics_julielarsen_2785/");
+}
+
+.box-content.two {
+  background-image: url("https://news.mongabay.com/testpics_julielarsen_6422/");
+}
+
+.box-content.three {
+  background-image: url("https://news.mongabay.com/testpics_julielarsen_6435/");
+}
+
+.box-content.four {
+  background-image: url("https://news.mongabay.com/testpics_julielarsen_7833/");
+}
+
+.box-content.five {
+  background-image: url("https://news.mongabay.com/testpics_julielarsen_8411/");
+}
+
+.box-content.six {
+  background-image: url("https://news.mongabay.com/testpics_julielarsen_8915/");
+}
