@@ -31,7 +31,7 @@ if (document.getElementById("portfolio")) {
         scrub: true,
         trigger: sec,
         pin: sec,
-        start: "center center",
+        start: "top 10%",
         end: () => `+=${pinWrapWidth}`,
         invalidateOnRefresh: true
       },
