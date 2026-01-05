@@ -37,6 +37,9 @@ section {
   margin-left: auto;
 }
 
+.section.horizontal-gallery {
+  padding-top: 10vh;
+}
 .horiz-gallery-strip,
 .horiz-gallery-wrapper {
   display: flex;
