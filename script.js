@@ -31,7 +31,7 @@ if (document.getElementById("portfolio")) {
         scrub: true,
         trigger: sec,
         pin: sec,
-        start: "top 30%",
+        start: "center center",
         end: () => `+=${pinWrapWidth}`,
         invalidateOnRefresh: true
       },
@@ -42,6 +42,11 @@ if (document.getElementById("portfolio")) {
     ScrollTrigger.addEventListener("refreshInit", refresh);
   });
 }
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+  setTimeout(() => ScrollTrigger.refresh(), 300);
+});
 
 
 //Filter Gallery
